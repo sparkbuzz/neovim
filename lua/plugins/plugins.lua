@@ -28,6 +28,7 @@ return packer.startup(function(use)
   -- Plugins
   use "nvim-lua/plenary.nvim"
   use "wbthomason/packer.nvim"
+  use "navarasu/onedark.nvim"
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
