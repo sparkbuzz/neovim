@@ -1,9 +1,18 @@
--- Load config files from ./lua/config/
+-- Requires all files from the given folder within ./lua/{path} 
 --
-local files = io.popen('find ./lua/config -type f')
-for file in files:lines() do
-  local req_file = file:gmatch("(config%/.+)%.lua$"){0}:gsub("/", ".")
-  -- print ("Loading config: " .. req_file) 
-  require (req_file)
+function requirePath(path) 
+  local count = 0
+  local files = io.popen('find ./lua/' .. path .. ' -type f')
+
+  for file in files:lines() do
+    local req_file = file:gmatch("(" .. path .. "%/.+)%.lua$"){0}:gsub("/", ".")
+    require (req_file)
+    count = count + 1
+  end
 end
+
+-- Load config files & plugins
+--
+requirePath('config')
+requirePath('plugins')
 
