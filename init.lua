@@ -7,12 +7,13 @@ function requirePath(path)
   for file in files:lines() do
     local req_file = file:gmatch("(" .. path .. "%/.+)%.lua$"){0}:gsub("/", ".")
     require (req_file)
+    vim.notify('Loaded ' .. req_file)
     count = count + 1
   end
 end
 
 -- Load config files & plugins
 --
-requirePath('config')
 requirePath('plugins')
+-- requirePath('config')
 

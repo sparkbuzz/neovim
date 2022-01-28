@@ -6,39 +6,41 @@ if not luasnip_ok then return end
 
 -- Loads snippets from plugin rafamadriz/friendly-snippets
 --
-require('luasnip.loaders.from_vscode').load()
+require('luasnip.loaders.from_vscode').lazy_load()
 
 local check_backspace = function()
   local col = vim.fn.col '.' - 1
   return col == 0 or vim.fn.getline('.'):sub(col, col):match '%s'
 end
 
+-- Configure kind icons for completion popup
+--
 local kind_icons = {
-  Text = '',
-  Method = 'm',
-  Function = '',
-  Constructor = '',
-  Field = '',
-  Variable = '',
   Class = '',
+  Color = '',
+  Constant = '',
+  Constructor = '',
+  Enum = '',
+  EnumMember = '',
+  Event = '',
+  Field = '',
+  File = '',
+  Folder = '',
+  Function = '',
   Interface = '',
+  Keyword = '',
+  Method = 'm',
   Module = '',
+  Operator = '',
   Property = '',
+  Reference = '',
+  Snippet = '',
+  Struct = '',
+  Text = '',
+  TypeParameter = '',
   Unit = '',
   Value = '',
-  Enum = '',
-  Keyword = '',
-  Snippet = '',
-  Color = '',
-  File = '',
-  Reference = '',
-  Folder = '',
-  EnumMember = '',
-  Constant = '',
-  Struct = '',
-  Event = '',
-  Operator = '',
-  TypeParameter = '',
+  Variable = ''
 }
 
 cmp.setup({

@@ -18,9 +18,7 @@ end
 -- Safely load Packer 
 --
 local status_ok, packer = pcall(require, 'packer')
-if not status_ok then
-  return
-end
+if not status_ok then return end
 
 -- Show Packer window in a popup
 --
@@ -37,10 +35,13 @@ packer.init {
 return packer.startup(function(use)
   -- Plugins
   --
-  use 'navarasu/onedark.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/popup.nvim'
   use 'wbthomason/packer.nvim'
+
+  -- Theme
+  --
+  use 'navarasu/onedark.nvim'
 
   -- Code completion
   --
