@@ -15,5 +15,5 @@ end
 -- Load config files & plugins
 --
 requirePath('plugins')
--- requirePath('config')
+requirePath('config')
 
