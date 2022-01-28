@@ -9,7 +9,7 @@ local options = {
   cmdheight = 1,
 
   -- Set completion menu options
-  completeopt = { "menu", "menuone", "noinsert", "noselect" },
+  completeopt = { "menu", "menuone", "noselect" },
 
   -- Highlight current cursor line
   cursorline = true,
