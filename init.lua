@@ -1,7 +1,8 @@
 -- Requires all files from the given folder within ./lua/{path} 
 --
 function requirePath(path) 
-  local files = io.popen('find "$HOME"/.config/nvim/lua/' .. path .. ' -type f')
+  local config_path = vim.fn.stdpath('config')
+  local files = io.popen('find ' .. config_path .. '/lua/' .. path .. ' -type f')
 
   for file in files:lines() do
     local req_file = file:gmatch('%/lua%/(.+).lua$'){0}:gsub('/', '.')
