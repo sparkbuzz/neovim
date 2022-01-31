@@ -1,4 +1,5 @@
-local fn = vim.fn 
+local fn = vim.fn
+local packer_bootstrap
 
 -- Automatically install Packer
 --
@@ -15,7 +16,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
--- Safely load Packer 
+-- Safely load Packer
 --
 local status_ok, packer = pcall(require, 'packer')
 if not status_ok then return end
@@ -50,9 +51,16 @@ return packer.startup(function(use)
   -- Completion sources for nvim-cmp
   --
   use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-nvim-lua'
+  use 'hrsh7th/cmp-path'
   use 'saadparwaiz1/cmp_luasnip'
+
+  -- LSP
+  --
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/nvim-lsp-installer'
 
   -- Snippets
   --
