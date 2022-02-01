@@ -1,11 +1,9 @@
 local schemas = {
   {
     description = 'NPM configuration file',
-    fileMatch = {
-      'package.json',
-    },
-    url = 'https://json.schemastore.org/package.json',
-  },
+    fileMatch = { 'package.json' },
+    url = 'https://json.schemastore.org/package.json'
+  }
 }
 
 local opts = {
