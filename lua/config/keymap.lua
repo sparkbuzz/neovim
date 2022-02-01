@@ -53,3 +53,7 @@ keymap('n', '<leader>fg', '<cmd>lua require("telescope.builtin").live_grep()<cr>
 keymap('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<cr>', term_opts)
 keymap('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<cr>', term_opts)
 
+-- Tree
+--
+keymap('n', '<leader>e', ':NvimTreeToggle<cr>', opts)
+

@@ -55,6 +55,11 @@ return packer.startup(function(use)
     }
   }
 
+  -- Nvim Tree
+  --
+  use 'kyazdani42/nvim-tree.lua'
+  use 'kyazdani42/nvim-web-devicons'
+
   -- Telescope
   --
   use {
