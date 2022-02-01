@@ -39,6 +39,7 @@ return packer.startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/popup.nvim'
   use 'wbthomason/packer.nvim'
+  use 'windwp/nvim-autopairs'
 
   -- Telescope
   --
@@ -46,6 +47,15 @@ return packer.startup(function(use)
     'nvim-telescope/telescope.nvim',
     requires = {{'nvim-lua/plenary.nvim'}}
   }
+
+  -- Treesitter
+  --
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
+  use 'p00f/nvim-ts-rainbow'
+  use 'nvim-treesitter/playground'
 
   -- Theme
   --
