@@ -41,6 +41,11 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'windwp/nvim-autopairs'
 
+  -- Buffers
+  --
+  use 'akinsho/bufferline.nvim'
+  use 'moll/vim-bbye'
+
   -- Commenting
   --
   use 'numToStr/Comment.nvim'
