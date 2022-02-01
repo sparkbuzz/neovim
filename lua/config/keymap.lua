@@ -46,3 +46,10 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+-- Telescope
+--
+keymap('n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files()<cr>', term_opts)
+keymap('n', '<leader>fg', '<cmd>lua require("telescope.builtin").live_grep()<cr>', term_opts)
+keymap('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<cr>', term_opts)
+keymap('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<cr>', term_opts)
+

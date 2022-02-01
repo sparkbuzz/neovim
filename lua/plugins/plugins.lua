@@ -40,6 +40,13 @@ return packer.startup(function(use)
   use 'nvim-lua/popup.nvim'
   use 'wbthomason/packer.nvim'
 
+  -- Telescope
+  --
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/plenary.nvim'}}
+  }
+
   -- Theme
   --
   use 'navarasu/onedark.nvim'
