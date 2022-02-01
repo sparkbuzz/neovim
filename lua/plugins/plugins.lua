@@ -41,11 +41,16 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'windwp/nvim-autopairs'
 
+  -- Commenting
+  --
+  use 'numToStr/Comment.nvim'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+
   -- Telescope
   --
   use {
     'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/plenary.nvim'}}
+    requires = {{ 'nvim-lua/plenary.nvim' }}
   }
 
   -- Treesitter
