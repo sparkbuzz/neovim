@@ -21,11 +21,11 @@ end
 local status_ok, packer = pcall(require, 'packer')
 if not status_ok then return end
 
--- Show Packer window in a popup
---
 packer.init {
+  compile_path = fn.stdpath('data') .. '/.packer/packer_compiled.lua',
   display = {
     open_fn = function()
+      -- Show Packer window in a popup
       return require('packer.util').float { border = 'rounded' }
     end
   }
