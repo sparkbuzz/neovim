@@ -13,8 +13,6 @@ bufferline.setup({
     right_trunc_marker = '',
 
     close_command = 'Bdelete! %d',
-    numbers = 'none',
-    number_style = 'superscript',
     right_mouse_command = 'Bdelete! %d',
     left_mouse_command = 'buffer %d',
     middle_mouse_command = nil,
