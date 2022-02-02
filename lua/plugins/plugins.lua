@@ -60,6 +60,11 @@ return packer.startup(function(use)
     }
   }
 
+  -- Lualine
+  --
+  use 'nvim-lualine/lualine.nvim'
+  use 'SmiteshP/nvim-gps'
+
   -- Nvim Tree
   --
   use 'kyazdani42/nvim-tree.lua'
