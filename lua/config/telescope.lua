@@ -30,8 +30,20 @@ telescope.setup({
   },
 
   pickers = {
+    commands = {
+      layout_config = {
+        horizontal = {
+          height = 0.5,
+          width = 0.5,
+        },
+      },
+    },
     find_files = {
-      previewer = false
-    }
-  }
+      layout_config = {
+        width = 0.5,
+        height = 0.5,
+      },
+      previewer = false,
+    },
+  },
 })
