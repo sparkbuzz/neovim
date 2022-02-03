@@ -22,6 +22,8 @@ vim.g.nvim_tree_icons = {
   }
 }
 
+vim.g.nvim_tree_respect_buf_cwd = 1
+
 nvim_tree.setup {
   disable_netrw       = true,
   hijack_netrw        = true,
@@ -30,7 +32,7 @@ nvim_tree.setup {
   auto_close          = false,
   open_on_tab         = false,
   hijack_cursor       = false,
-  update_cwd          = false,
+  update_cwd          = true,
   update_to_buf_dir   = {
     enable = true,
     auto_open = true,
@@ -45,8 +47,8 @@ nvim_tree.setup {
     }
   },
   update_focused_file = {
-    enable      = false,
-    update_cwd  = false,
+    enable      = true,
+    update_cwd  = true,
     ignore_list = {}
   },
   system_open = {
@@ -81,35 +83,3 @@ nvim_tree.setup {
     require_confirm = true
   }
 }
-
-local M = {}
-
-require('nvim-tree.events').on_nvim_tree_ready(function()
-  vim.g.nvim_tree_ready = 1
-end)
-
--- This function updates the nvim-tree root path once the working dir changes.
---
-function M.update_cwd()
-  if vim.g.nvim_tree_ready == 1 then
-    local view = require('nvim-tree.view')
-    local lib = require('nvim-tree.lib')
-    if view.win_open() then
-      lib.change_dir(vim.fn.getcwd())
-    end
-  end
-end
-
--- Run NvimtreeConfig.update_cwd() when DirChanged occurs
---
-vim.api.nvim_exec(
-  [[
-  augroup NvimTreeConfig
-    autocmd!
-    autocmd DirChanged * lua NvimTreeConfig.update_cwd()
-  augroup END
-  ]],
-  false
-)
-
-_G.NvimTreeConfig = M
