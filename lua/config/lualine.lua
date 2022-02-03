@@ -12,6 +12,9 @@ lualine.setup({
       left = '',
       right = '' 
     },
+    disabled_filetypes = {
+      'alpha', 'NvimTree'
+    },
     section_separators = {
       left = '',
       right = ''

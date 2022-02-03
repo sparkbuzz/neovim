@@ -48,6 +48,10 @@ return packer.startup(function(use)
   use 'nvim-lua/popup.nvim'
   use 'wbthomason/packer.nvim'
   use 'windwp/nvim-autopairs'
+  use({
+    'goolord/alpha-nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+  })
 
   -- Buffers
   --

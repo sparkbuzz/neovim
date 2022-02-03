@@ -3,6 +3,9 @@ if not status_ok then
   return
 end
 
+vim.g.indent_blankline_buftype_exclude = { 'terminal', 'nofile' }
+vim.g.indent_blankline_filetype_exclude = { 'help', 'dashboard', 'packer', 'NvimTree' }
+
 vim.opt.list = true
 vim.opt.listchars:append('eol:↴')
 vim.opt.listchars:append('trail:.')
@@ -16,5 +19,4 @@ indent_blankline.setup({
     'IndentBlanklineIndent1',
   },
   show_current_context = true,
-  show_end_of_line = true,
 })
