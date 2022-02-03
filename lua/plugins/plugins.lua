@@ -1,3 +1,8 @@
+local status_ok, impatient = pcall(require, 'impatient')
+if status_ok then
+  impatient.enable_profile()
+end
+
 local fn = vim.fn
 local packer_bootstrap
 
@@ -37,6 +42,7 @@ return packer.startup(function(use)
   -- Plugins
   --
   use 'akinsho/toggleterm.nvim'
+  use 'lewis6991/impatient.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/popup.nvim'
   use 'wbthomason/packer.nvim'
