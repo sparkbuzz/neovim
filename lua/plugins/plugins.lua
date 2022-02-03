@@ -36,6 +36,7 @@ packer.init {
 return packer.startup(function(use)
   -- Plugins
   --
+  use 'akinsho/toggleterm.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/popup.nvim'
   use 'wbthomason/packer.nvim'
