@@ -10,6 +10,13 @@ telescope.setup({
     path_display = { 'smart' },
     winblend = 10,
 
+    layout_config = {
+      horizontal = {
+        height = 0.5,
+        width = 0.5,
+      },
+    },
+
     mappings = {
       i = {
         ['<C-j>'] = actions.move_selection_next,
@@ -30,19 +37,7 @@ telescope.setup({
   },
 
   pickers = {
-    commands = {
-      layout_config = {
-        horizontal = {
-          height = 0.5,
-          width = 0.5,
-        },
-      },
-    },
     find_files = {
-      layout_config = {
-        width = 0.5,
-        height = 0.5,
-      },
       previewer = false,
     },
   },
