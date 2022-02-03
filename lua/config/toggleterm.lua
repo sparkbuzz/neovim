@@ -27,7 +27,7 @@ toggleterm.setup({
   shell = vim.o.shell,
   float_opts = {
     border = 'curved',
-    winblend = 8,
+    winblend = 10,
     highlights = {
       border = 'Normal',
       background = 'Normal',
@@ -45,4 +45,4 @@ function _lazygit_toggle()
   lazygit:toggle()
 end
 
-vim.api.nvim_set_keymap('n', '<leader>g', '<cmd>lua _lazygit_toggle()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>gg', '<cmd>lua _lazygit_toggle()<CR>', { noremap = true, silent = true })
