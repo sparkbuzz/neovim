@@ -59,6 +59,7 @@ keymap('n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files()<cr
 keymap('n', '<leader>fg', '<cmd>lua require("telescope.builtin").live_grep()<cr>', term_opts)
 keymap('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<cr>', term_opts)
 keymap('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<cr>', term_opts)
+keymap('n', '<leader>fc', '<cmd>lua require("telescope.builtin").commands()<cr>', term_opts)
 
 -- Tree
 --
