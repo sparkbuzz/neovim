@@ -92,6 +92,10 @@ return packer.startup(function(use)
   }
   use 'nvim-telescope/telescope-project.nvim'
 
+  -- Testing
+  --
+  use 'vim-test/vim-test'
+
   -- Treesitter
   --
   use {
