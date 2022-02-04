@@ -68,4 +68,3 @@ keymap('n', '<leader>e', ':NvimTreeToggle<cr>', opts)
 -- nvim-ls
 --
 keymap('n', '<leader>f', ':Format<cr>', opts)
-

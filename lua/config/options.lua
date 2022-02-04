@@ -86,6 +86,9 @@ local options = {
   -- Enable 24-bit RGB color
   termguicolors = true,
 
+  -- Time in ms to wait for a mapped sequence to complete
+  timeoutlen = 350,
+
   -- Create an undo file to persist undo's
   undofile = true,
 

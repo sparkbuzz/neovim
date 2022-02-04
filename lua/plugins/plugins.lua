@@ -52,6 +52,7 @@ return packer.startup(function(use)
     'goolord/alpha-nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },
   })
+  use 'folke/which-key.nvim'
 
   -- Buffers
   --
