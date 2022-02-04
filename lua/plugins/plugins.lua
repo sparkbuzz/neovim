@@ -122,6 +122,10 @@ return packer.startup(function(use)
   use 'williamboman/nvim-lsp-installer'
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'weilbith/nvim-code-action-menu'
+  use {
+    'folke/trouble.nvim',
+    requires = 'kyazdani42/nvim-web-devicons',
+  }
 
   -- Snippets
   --

@@ -4,10 +4,9 @@ if not status_ok then
 end
 
 vim.g.indent_blankline_buftype_exclude = { 'terminal', 'nofile' }
-vim.g.indent_blankline_filetype_exclude = { 'help', 'dashboard', 'packer', 'NvimTree' }
+vim.g.indent_blankline_filetype_exclude = { 'help', 'dashboard', 'packer', 'NvimTree', 'Trouble' }
 
 vim.opt.list = true
-vim.opt.listchars:append('eol:↴')
 vim.opt.listchars:append('trail:.')
 
 vim.opt.termguicolors = true
