@@ -11,11 +11,14 @@ telescope.setup({
     winblend = 10,
 
     layout_config = {
+      prompt_position = 'top',
       horizontal = {
         height = 0.5,
         width = 0.5,
       },
     },
+
+    sorting_strategy = 'ascending',
 
     mappings = {
       i = {
