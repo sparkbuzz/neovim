@@ -61,9 +61,10 @@ keymap('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<cr>',
 keymap('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<cr>', term_opts)
 keymap('n', '<leader>fc', '<cmd>lua require("telescope.builtin").commands()<cr>', term_opts)
 
--- Tree
+-- Tre & Symbols Outline
 --
 keymap('n', '<leader>e', ':NvimTreeToggle<cr>', opts)
+keymap('n', '<leader>o', ':SymbolsOutline<cr>', opts)
 
 -- nvim-ls
 --

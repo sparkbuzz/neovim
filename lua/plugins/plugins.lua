@@ -100,6 +100,7 @@ return packer.startup(function(use)
   }
   use 'p00f/nvim-ts-rainbow'
   use 'nvim-treesitter/playground'
+  use 'simrat39/symbols-outline.nvim'
 
   -- Theme
   --
