@@ -26,6 +26,7 @@ keymap("n", "<C-h>", "<C-w>h", opts)
 --
 keymap("n", "<A-l>", ":bnext<CR>", opts)
 keymap("n", "<A-h>", ":bprevious<CR>", opts)
+keymap("n", "<leader>bd", ":Bdelete<CR>", opts)
 
 -- Stay in indent mode
 --
