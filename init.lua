@@ -2,7 +2,7 @@
 --
 local function requirePath(path)
   local config_path = vim.fn.stdpath('config')
-  local files = io.popen('find ' .. config_path .. '/lua/' .. path .. ' -type f -maxdepth 1')
+  local files = io.popen('find ' .. config_path .. '/lua/' .. path .. ' -type f -maxdepth 1 | sort')
 
   for file in files:lines() do
     local req_file = file:gmatch('%/lua%/(.+).lua$'){0}:gsub('/', '.')
