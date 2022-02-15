@@ -45,3 +45,9 @@ telescope.setup({
     },
   },
 })
+
+local dap_status, _ = pcall(require, 'dap')
+if dap_status then
+  telescope.load_extension('dap')
+end
+

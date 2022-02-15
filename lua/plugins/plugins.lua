@@ -42,17 +42,18 @@ return packer.startup(function(use)
   -- Plugins
   --
   use 'akinsho/toggleterm.nvim'
+  use 'folke/which-key.nvim'
   use 'lewis6991/impatient.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/popup.nvim'
+  use 'rcarriga/nvim-notify'
   use 'wbthomason/packer.nvim'
   use 'windwp/nvim-autopairs'
   -- use({
   --   'goolord/alpha-nvim',
   --   requires = { 'kyazdani42/nvim-web-devicons' },
   -- })
-  use 'folke/which-key.nvim'
   use 'windwp/nvim-ts-autotag'
 
   -- Buffers
@@ -60,10 +61,19 @@ return packer.startup(function(use)
   use 'akinsho/bufferline.nvim'
   use 'moll/vim-bbye'
 
-  -- Commenting
-  --
+-- Commenting
   use 'numToStr/Comment.nvim'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
+
+  -- Debugging
+  --
+  use 'mfussenegger/nvim-dap'
+  use 'nvim-telescope/telescope-dap.nvim'
+  use 'theHamsta/nvim-dap-virtual-text'
+  use {
+    'rcarriga/nvim-dap-ui',
+    requires = { 'mfussenegger/nvim-dap' }
+  }
 
   -- Git
   --
@@ -88,7 +98,7 @@ return packer.startup(function(use)
   --
   use {
     'nvim-telescope/telescope.nvim',
-    requires = {{ 'nvim-lua/plenary.nvim' }}
+    requires = { 'nvim-lua/plenary.nvim' }
   }
   use 'nvim-telescope/telescope-project.nvim'
 
