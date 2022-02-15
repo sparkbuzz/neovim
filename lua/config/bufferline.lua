@@ -6,7 +6,9 @@ end
 bufferline.setup({
   options = {
     custom_filter = function(buf, buf_nums)
-      return not vim.fn.bufname(buf):match('term')
+      return
+        not vim.fn.bufname(buf):match('term') and
+        vim.bo[buf].filetype ~= 'dap-repl'
     end,
 
     -- Diagnostics
