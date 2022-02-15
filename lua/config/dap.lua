@@ -98,5 +98,8 @@ keymap('n', '<leader>d.', '<cmd>lua local widgets = require("dap.ui.widgets"); w
 
 -- Telescope
 --
-keymap('n', '<leader>df', ':Telescope dap frames<cr>', opts)
-keymap('n', '<leader>dl', ':Telescope dap list_breakpoints<cr>', opts)
+local telescope_ok, _ = require('telescope')
+if telescope_ok then
+  keymap('n', '<leader>df', ':Telescope dap frames<cr>', opts)
+  keymap('n', '<leader>dl', ':Telescope dap list_breakpoints<cr>', opts)
+end
