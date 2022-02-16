@@ -8,28 +8,41 @@ end
 
 lualine.setup({
   options = {
-    component_separators = { 
-      left = '',
-      right = '' 
-    },
+    icons_enabled = true,
+    theme = 'auto',
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
     disabled_filetypes = {
-      'alpha', 'NvimTree'
+      'alpha',
+      'dap-repl',
+      'dapui_breakpoints',
+      'dapui_scopes',
+      'dapui_stacks',
+      'dapui_watches',
+      'NvimTree'
     },
-    section_separators = {
-      left = '',
-      right = ''
-    },
+    always_divide_middle = true,
   },
   sections = {
-    lualine_c = {
-      {
-        gps.get_location,
-        cond = gps.is_available,
-      }
-    }
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {'filename'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
   },
-  extensions = {
-    'nvim-tree',
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {{
+      gps.get_location,
+      cond = gps.is_available
+    }},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
   },
+  tabline = {},
+  extensions = {'nvim-tree'}
 })
 
